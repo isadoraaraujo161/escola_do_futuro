@@ -1,32 +1,26 @@
+const readline = require('readline');
 
-const readline = require('readline').createInterface({
-    input: process.stdin,  
-    output: process.stdout  
+// Cria a interface de leitura e escrita (entrada e saída padrão)
+const rl = readline.createInterface({
+  input: process.stdin,   // Entrada: teclado
+  output: process.stdout  // Saída: terminal
 });
 
-
-const pergunta = (texto) => new Promise((resolve) => readline.question(texto, resolve));
-
-
-async function calcularPitagoras() {
-    console.log("--- Calculadora de Hipotenusa ---");
-    
-     const entradaA = await pergunta("Digite o valor do Cateto A: ");
-    const entradaB = await pergunta("Digite o valor do Cateto B: ");
-    
-    const a = parseFloat(entradaA);
-    const b = parseFloat(entradaB);
-    
-    if (isNaN(a) || isNaN(b)) {
-        console.log("Erro: Por favor, insira apenas valores numéricos.");
-    } else {
+    rl.question ('\nDigite o valor do cateto A:',(a)=>{
+    rl.question('\nDigite o valordo cateto B:',(b)=>{
         
-            const hipotenusa = Math.hypot(a, b);
+            
+             const catetoA = parseFloat(a);
+             const catetoB = parseFloat(b);
+            
+             
+          const somaDosQuadrados = Math.pow(catetoA, 2) + Math.pow(catetoB, 2);
 
-   console.log(`\nCom catetos ${a} e ${b}, a hipotenusa é: ${hipotenusa.toFixed(2)}`);
-    }
-    
-     readline.close();
-}
 
-calcularPitagoras();
+           const hipotenusa = Math.sqrt(somaDosQuadrados);
+
+
+          console.log(`A hipotenusa para os catetos ${catetoA} e ${catetoB} é: ${hipotenusa}`);
+      
+       });
+    });
