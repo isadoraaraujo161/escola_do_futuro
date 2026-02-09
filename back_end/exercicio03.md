@@ -1,6 +1,26 @@
 1. Escreva um programa que mostre na tela a seguinte contagem: 6 7 8 9 10 11
 Acabou!
 
+const readline = require('readline');
+
+// Cria a interface de leitura e escrita (entrada e saída padrão)
+const rl = readline.createInterface({
+  input: process.stdin,  
+  output: process.stdout  
+});
+
+rl.question('Digite o número que você queira começar a contagem:\n',(num1)=>{
+    rl.question ('Digite o número que você queira terminar a contagem:\n',(num2)=>{
+        
+        const n1 = parseFloat (num1)
+        const n2 = parseFloat (num2)
+
+for (let i = n1; i < n2; i++) {
+    console.log(`Contagem: ${i}`);
+}
+   console.log ('Acabou!')
+});
+});
 
 
 2. Faça um algoritmo que mostre na tela a seguinte contagem: 10 9 8 7 6 5 4 3
