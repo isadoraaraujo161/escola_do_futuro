@@ -17,9 +17,9 @@ rl.question("Digite o primeiro valor: ", (inicio) => {
 
       for (let i = inicio; i < fim; i += incremento) {
         resultado += i + " ";
+        console.log(`Contagem: ${i}`);
       }
 
-      console.log(resultado.trim());
       console.log("Acabou!");
 
       rl.close();
