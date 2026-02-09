@@ -6,14 +6,15 @@ const rl = readline.createInterface({
   output: process.stdout  // Saída: terminal
 });
 
-rl.question('Digite o número que você quer começar a contagem:\n',(num1)=>{
+rl.question('Digite o número que você queira começar a contagem:\n',(num1)=>{
     rl.question ('Digite o número que você queira terminar a contagem:\n',(num2)=>{
         
         const n1 = parseFloat(num1);
         const n2 = parseFloat(num2);
 
-for (let i = n1; i < n2; i--) {
+for (let i = n1; i > n2; i--) {
     console.log(`Contagem: ${i}`);
 }
+    console.log ('Acabou!');
 });
 });
