@@ -1,0 +1,17 @@
+ 
+{
+    "name": "test-project",
+    "version": "1.0.0",
+    "description": "A Node.js project",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node ./src/index",
+        "build": "webpack --mode production"
+    },
+    "dependencies": {
+        "react": "^18.2.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.0.0"
+    }
+}
