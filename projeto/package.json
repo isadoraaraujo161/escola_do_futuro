@@ -1,8 +1,8 @@
  
 {
-    "name": "test-project",
+    "name": "Leitura_e_escrita_de_arquivos_em_node_js"",
     "version": "1.0.0",
-    "description": "A Node.js project",
+    "description": "Leitura e escrita de aequivos em node.js",
     "main": "src/index.js",
     "scripts": {
         "start": "node ./src/index",
