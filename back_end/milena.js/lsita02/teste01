@@ -1,0 +1,22 @@
+const readline = require ("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+let idade;
+rl.question("Digite seu nome:" , (nome) => {
+   rl.question("Digite a sua idade:" , (idade) => {
+
+    if(idade >= 16 ){
+          console.log("Entrada permitida!");
+    }
+    else if(idade < 16){
+        console.log("Entrada não permitida!");
+    }
+    else{
+        console.log("Idade não encontrada, por favor faça novamente");
+    }
+
+   });
+});
